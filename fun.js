@@ -64,17 +64,71 @@ showMessage()*/
 
 /*ПАРАМЕТРЫ или аргументы */
 
-function myFunction (a=3, b=4) {
-var x = a * b; 
-alert(x);
-}
+//function myFunction (a=3, b=4) {
+//var x = a * b; 
+//alert(x);
+//}
 
-myFunction();
+//myFunction();
 
 /*ВОЗВРАТ ЗНАЧЕНИЯ */
-function sum(a, b) {
+/*function sum(a, b) {
     return a + b;
   }
   
   let result = sum(1, 2);
   alert( result ); // 3
+
+
+
+
+
+/*function myFunction() {
+  fruits.sort();
+}
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+alert(fruits);
+var massiv = myFunction;
+myFunction();*/
+
+
+
+/*ЭТО БЫЛ ПРИМЕР! Я его копирнула - нихрена!
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // Sorts the elements of fruits
+ 
+
+
+
+Ок! Зашла посмотрела как сделали в учебнике - 
+ 
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort();
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>*/
+
+//Но здесь в html написан скрипт,
+ //а я хотела в JS файле и в alert вывести отсортированый массив
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+alert(fruits);
+
+function myFruits () {
+    fruits.sort(); 
+    alert(fruits);  
+}     
+myFruits();
