@@ -35,12 +35,28 @@ showMessage(); // Привет, я JavaScript!*/
 //showMessage();*/
 
 /*Ф-ция меняет значение внешней переменной */
-let userName = 'Вася'; /*внешняя переменная*/
-alert (userName);
+//let userName = 'Вася'; /*внешняя переменная*/
+//alert (userName);
+
+//function showMessage() {
+  //userName = "Pety";/*ф-ция меняет значение внешней пере-ой*/
+  //alert(userName);
+//}
+
+//showMessage();
+
+
+
+/*Если создали локальную п-ную с таким же именем как у внешней
+то внешняя игнорируется */
+let userName = "Vasy";
 
 function showMessage() {
-  userName = "Pety";/*ф-ция меняет значение внешней пере-ой*/
-  alert(userName);
+    let userName = "Pety";
+
+    let message = "Hello, " + userName;
+    alert(message);
 }
 
-showMessage();
+alert (userName);
+showMessage()
