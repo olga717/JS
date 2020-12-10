@@ -49,7 +49,7 @@ showMessage(); // Привет, я JavaScript!*/
 
 /*Если создали локальную п-ную с таким же именем как у внешней
 то внешняя игнорируется */
-let userName = "Vasy";
+/*let userName = "Vasy";
 
 function showMessage() {
     let userName = "Pety";
@@ -59,4 +59,14 @@ function showMessage() {
 }
 
 alert (userName);
-showMessage()
+showMessage()*/
+
+
+/*ПАРАМЕТРЫ или аргументы */
+
+function myFunction (a=3, b=4) {
+var x = a * b; 
+alert(x);
+}
+
+myFunction();
