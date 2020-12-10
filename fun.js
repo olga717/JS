@@ -39,7 +39,7 @@ let userName = 'Вася'; /*внешняя переменная*/
 alert (userName);
 
 function showMessage() {
-  let userName = "Pety";/*локальная пере-ая меняет значение внешней*/
+  userName = "Pety";/*ф-ция меняет значение внешней пере-ой*/
   alert(userName);
 }
 
