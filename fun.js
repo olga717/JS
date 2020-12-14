@@ -189,3 +189,4 @@ function myFruits () {
     alert(fruits);  
 }     
 myFruits();
+
