@@ -1,9 +1,10 @@
 /*ключевое слово + имя ф-ции 
 (параметры ф-ции, скобки всегда)
 {тело ф-ции - код, действие}*/
+"use strict"
+alert ("Hello!");
 
-function myFun () {
-
+/*function myFun () {
     alert ("Hello!");
 }
 
@@ -31,7 +32,8 @@ var fun = function ( x,y ) {return ( x * y)};
 var z = fun (4,2);
 alert (z);
  /* Fanction Constructor */
- //аналогичный вариант Expration
+ //аналогичный вариант Expretion
+
  var myFunction = new Function("x", "y", "return x * y");
 
  var z = myFunction(4, 3);
@@ -53,19 +55,11 @@ function myFunction(a, b) {
   return arguments.length;//arguments.length - св-во 
   //возвращает к-во аргументов, когда ф-ция была вызвана
 }
- /*AROW стрелки ф-ций */
-//позволяют ис-ть короткий синтаксис
-var x = function(x, y) {  //обычный синтаксис
-  return x * y;
-}
+ 
 
-// ES6 ненужно ключевое слово, return, скобки
-//если ф-ция представляет собой едниный операор
-const x = (x, y) => x * y;
-//Функции стрелок не имеют своих собственных thisфункций . 
-//Они не очень хорошо подходят для определения методов объекта.
-//Функции стрелок no hosting.
-// Они должны быть определены до того, как будут использованы.
+
+
+
 
 /*Локальная переменная
 видна только внутри ф-ции*/ 
@@ -149,38 +143,6 @@ alert(fruits);
 var massiv = myFunction;
 myFunction();*/
 
-
-
-/*ЭТО БЫЛ ПРИМЕР! Я его копирнула - нихрена!
-
-
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort();        // Sorts the elements of fruits
- 
-
-
-
-Ок! Зашла посмотрела как сделали в учебнике - 
- 
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits;
-
-function myFunction() {
-  fruits.sort();
-  document.getElementById("demo").innerHTML = fruits;
-}
-</script>*/
-
-//Но здесь в html написан скрипт,
- //а я хотела в JS файле и в alert вывести отсортированый массив
-
-
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 alert(fruits);
 
@@ -189,4 +151,5 @@ function myFruits () {
     alert(fruits);  
 }     
 myFruits();
+
 
