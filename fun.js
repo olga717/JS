@@ -50,6 +50,21 @@ function myFunction(a, b) {
 }
 var x = myFunction(4, 3) * 2; //ф-ция и-ся в выражении
 
+// в случае присваения значения переменной
+//в виде ф-ции ставим в конце ; как обычно
+//после значения переменной
+let sayHi = function() {alert('Hi')};
+let func = sayHi;
+
+sayHi();
+func();
+
+
+
+
+
+
+
 //Ф-ция эо объект. У нее есть и свойства и методы
 function myFunction(a, b) {
   return arguments.length;//arguments.length - св-во 
@@ -82,7 +97,6 @@ showMessage(); // Привет, я JavaScript!*/
  // let message = 'Привет, ' + userName; /*локальная пере-ая  */
  // alert(message);
 //}
-
 //showMessage();*/
 
 /*Ф-ция меняет значение внешней переменной */

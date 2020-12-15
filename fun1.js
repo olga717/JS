@@ -63,3 +63,18 @@ myFun();
     () => alert("Вы отменили выполнение.")
   );
   
+
+  //Callback ф-ции
+  //возможнось передать одну ф-цию в качестве
+  //аргумента для другой
+
+  function first(y) {
+      console.log(1);
+      y();
+  }
+  function second() {
+      console.log(2);
+  }
+ first(second);//ф-ция second аргумент для первой
+
+ 
