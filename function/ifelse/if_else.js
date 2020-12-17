@@ -1,3 +1,5 @@
+'use strict'
+
 //Косктрукция if else
 //Оператор условия if
 /*let c =5;
@@ -49,7 +51,59 @@ switch (num) {
 default:
         alert('okkk');
 }
+// пример 2
+let a = 2 + 2;
 
+switch (a) {
+  case 3:
+    alert( 'Маловато' );
+    break;
+  case 4:
+    alert( 'В точку!' );
+    break;
+  case 5:
+    alert( 'Перебор' );
+    break;
+  default:
+    alert( 'Нет таких значений' );
+}
+
+//групировка case
+let a = 2 + 2;
+
+switch (a) {
+  case 4:
+    alert('Правильно!');
+    break;
+
+  case 3: // (без breck) группируем оба case
+  case 5:
+    alert('Неправильно!');
+    alert("Может вам посетить урок математики?");
+    break;
+
+  default:
+    alert('Результат выглядит странновато. Честно.');
+}
+
+//строгое равенство типов
+let arg = prompt("Введите число?");
+switch (arg) {
+  case '0':
+  case '1':
+    alert( 'Один или ноль' );
+    break;
+
+  case '2':
+    alert( 'Два' );
+    break;
+
+  case 3://тип не соответствует
+    alert( 'Никогда не выполнится!' );
+    break;
+  default:
+    alert( 'Неизвестное значение' );
+}
 
 
 
