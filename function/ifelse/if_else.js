@@ -41,13 +41,13 @@ else { // любые другие условия
 let num = prompt ('Сколько тебе лет?', ' ');
 switch (num) {
     case 15:
-        console.log('Еще год потерпи');
+       alert ('Еще год потерпи');
         break;
     case 16:
-        console.log('Ураааа!');
+        alert ('Ураааа!');
     break;
 default:
-    console.log('okkk');
+        alert('okkk');
 }
 
 
@@ -58,7 +58,7 @@ default:
 
 let b = 15;
 b == 15 ? alert ('yes') : alert ('no');
-//(условие лучше в (b==5))
+//(условие лучше в скобках (b==5))
 
 
 //несколько операторов '?'
@@ -72,4 +72,11 @@ let message = (age1 < 3) ? 'Здравствуй, малыш!' :
   'Какой необычный возраст!';
 
 alert( message );
+
+//сложные условия с логическими операторами
+//&& или  || и
+
+let a = 3;
+console.log (a == 3 && a > 3);
+//console.log (a == 3 || a > 3);
 
