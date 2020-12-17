@@ -37,7 +37,20 @@ else { // любые другие условия
 }
 
 
-//если много if применяется метод switch
+//если много if применяется метод switch case
+let num = prompt ('Сколько тебе лет?', ' ');
+switch (num) {
+    case 15:
+        console.log('Еще год потерпи');
+        break;
+    case 16:
+        console.log('Ураааа!');
+    break;
+default:
+    console.log('okkk');
+}
+
+
 
 
 //тернарный/условный оператор '?'
