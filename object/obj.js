@@ -1,12 +1,13 @@
+'use strict'
 // синтаксис "конструктор объекта"
 //let user = new Object(); 
 
-//синтаксис "литерал обьекта"
+/*синтаксис "литерал обьекта"
 let obj = {
     ключ1: значение,
     ключ2: значение,
     "ключ3 ключ": значение,//если более 2х слов, то в ""
-}; //можно ставить "," после послед. значения
+} //можно ставить "," после послед. значения
 
 alert(obj.ключ1);//вызов значения через "."
 alert(obj.ключ3 ключ)//доступ к
@@ -27,5 +28,30 @@ const user = {
   };
   user.name = "Pete"; 
   
-  alert(user.name);//Pete
-  
+  alert(user.name);//Pete*/
+
+ /*const person = {
+     name: 'Maxim',
+     age: 25,
+     greet: function () {
+         console.log ( 'Greet!')
+     }
+    };*/
+
+    //Прототипы объектов
+    const person = new Object ({
+        name: 'Maxim',
+        age: 25,
+        greet: function () {
+        console.log ( 'Greet!')
+    }
+       
+    })
+    Object.prototype.sayHello = function() {
+    console.log('Hello')
+    }
+
+    const lena = Object.create(person)
+    lena.name = 'Elena'
+    
+    const str = new String('I am string')
