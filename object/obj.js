@@ -28,3 +28,4 @@ const user = {
   user.name = "Pete"; 
   
   alert(user.name);//Pete
+  
