@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 // синтаксис "конструктор объекта"
 //let user = new Object(); 
 
@@ -41,7 +41,7 @@ const user = {
     };*/
 
     //Прототипы объектов
-    const person = new Object ({
+   /* const person = new Object ({
         name: 'Maxim',
         age: 25,
         greet: function () {
@@ -71,7 +71,7 @@ const user = {
       /*let key = "name";
       alert( user.key ); // undefined*/
 //[] для создания вычисляемого с-ва в литеральной нотации
-        let fruit = prompt("Какой фрукт купить?", "apple");
+       /* let fruit = prompt("Какой фрукт купить?", "apple");
 
         let bag = {
             [fruit]: 5, // имя св-а взято из п-ой fruit
@@ -89,7 +89,7 @@ let obj = {
   
   
   //__proto__не можем уст-ить его в необъектное значение:
-  let obj = {};
+  /*let obj = {};
   obj.__proto__ = 5; // присвоим число
   alert(obj.__proto__); // [object Object]
 
@@ -102,7 +102,7 @@ alert( "blabla" in user ); // false, user.blabla не существует
 
 
 // цикл for..in для перебора св-в объекта
-let user = {
+/*let user = {
     name: 'John',
     age: 30,
     isAdmin: true
@@ -111,9 +111,9 @@ let user = {
 for (let key in user) {
     alert (key);//name, age. isAdmin
     alert ( user[key] );//'John', 30,true
-}
+}*/
 //Упорядочение свойств объекта
-let codes = {
+/*let codes = {
     "49": "Германия",
     "41": "Швейцария",
     "44": "Великобритания",
@@ -123,10 +123,10 @@ let codes = {
   
   for (let code in codes) {
     alert(code); // 1, 41, 44, 49
-  }
+  }*/
   //это целочисленные св-ва, поэтому в порядке возростания
   //делаем их нецелочисл. добавив +
-  let codes = {
+  /*let codes = {
     "+49": "Германия",
     "+41": "Швейцария",
     "+44": "Великобритания",
@@ -136,12 +136,64 @@ let codes = {
   
   for (let code in codes) {
     alert( +code ); // 49, 41, 44, 1
-  }
+  }*/
   //получаем в порядке написания
 
 //задание
-  let user = {};
+  /*let user = {};
       user.name = 'John';
       user.surname ='Smith';
       user.name = 'Pete';
-  delete user.name;
+  delete user.name;*/
+
+//присвоение
+
+  /*let a =  {
+    one: "Hello",
+    name: 23,
+};*/
+
+/*let b = a;//присвоение по ссылки
+b.five = 5;//св-во добавляется и в 'а' и в 'б'
+console.log(a);
+console.log(b);*/
+
+//клонирование
+let a =  {
+    one: "Hello",
+    name: 23,
+};
+//клонируем объект а в новый несвязанный с ним
+let b = {};//создали пустой объект
+for (let key in a) {
+    b[key] = a[key];//передаем св-ва из 'a'
+
+}
+b.five = 5;//св-в0 добав-ся только в 'b'
+console.log(a);
+console.log(b);
+
+//2-й сп. клонирования Object.assign
+//не делает глубокого клонир-ия
+let user = {
+    name: "Иван",
+    age: 30
+  };
+  console.log (user);
+  
+  let clone = Object.assign({}, user);
+  clone.g = 35;
+  console.log (clone);
+
+//создание конструктора
+class Test {
+    constructor (a) {
+        this.c = a;
+    }
+}
+let myObj = new Test(5);
+myObj.d = 77;
+console.log(myObj);
+
+let myObj2 = new Test(6);
+console.log(myObj2);
