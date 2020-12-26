@@ -2,30 +2,30 @@
 // синтаксис "конструктор объекта"
 //let user = new Object(); 
 
-/*синтаксис "литерал обьекта"
-let obj = {
-    ключ1: значение,
-    ключ2: значение,
-    "ключ3 ключ": значение,//если более 2х слов, то в ""
-} //можно ставить "," после послед. значения
+//синтаксис "литерал обьекта"
+//let obj = {
+//    ключ1: значение,
+//    ключ2: значение,
+//    "ключ3 ключ": //значение,если более 2х слов, то в ""
+//}; //можно ставить "," после послед. значения
 
-alert(obj.ключ1);//вызов значения через "."
-alert(obj.ключ3 ключ)//доступ к
+//alert(obj.ключ1);//вызов значения через "."
+//alert(obj.ключ3 ключ)//доступ к
 //значению не работает
 //можно через []
-let user = {};
+//let user = {};
 
 
 // присваивание значения свойству
-user["likes birds"] = true;
+//user["likes birds"] = true;
 // получение значения свойства
-alert(user["likes birds"]); // true
+//alert(user["likes birds"]); // true
 
 // удаление свойства
-delete user["likes birds"];
+//delete user["likes birds"];
 
 //Объект, объявленный через const, может быть изменён.
-const user = {
+/*const user = {
     name: "John"
   };
   user.name = "Pete"; 
@@ -159,7 +159,7 @@ console.log(a);
 console.log(b);*/
 
 //клонирование
-let a =  {
+/*let a =  {
     one: "Hello",
     name: 23,
 };
@@ -221,4 +221,31 @@ function sayHi() {
 
 // используем одну и ту же функцию в двух объектах
 user.f = sayHi;
-admin.f = sayHi;
+admin.f = sayHi;*/
+
+//функция-консттруктор с заглавной
+//может вызыв. с помощью оператора new
+function User(name){
+this.name = name;
+this.isAdmin = false;
+}
+let user = new User('Вася');
+let user1 = new User('Маша');
+
+alert(user.name);
+alert(user.isAdmin);
+
+alert(user1.name);
+alert(user1.isAdmin);
+
+//методы в функции-конструктор
+function User1(name){
+  this.name = name;
+  this.sayHi = function (){
+    alert ('Меня зовут: ' + this.name );
+  };
+}
+
+let vasy = new User1('Вася');
+vasy.sayHi();
+
