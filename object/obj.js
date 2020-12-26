@@ -197,3 +197,28 @@ console.log(myObj);
 
 let myObj2 = new Test(6);
 console.log(myObj2);
+
+//ключевое слово в методах this
+let user = {
+  name: "Джон",
+  age: 30,
+
+  sayHi() {
+    // this - это "текущий объект"
+    alert(this.name);
+  }
+
+};
+
+user.sayHi(); // Джон
+
+let user = { name: "Джон" };
+let admin = { name: "Админ" };
+
+function sayHi() {
+  alert( this.name );
+}
+
+// используем одну и ту же функцию в двух объектах
+user.f = sayHi;
+admin.f = sayHi;
